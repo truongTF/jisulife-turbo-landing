@@ -978,6 +978,85 @@
       opacity: 1;
     }
 
+    /* Top Announcement Bar */
+    .top-announcement {
+      background: linear-gradient(90deg, #FF5520, #E54512);
+      color: #FFFFFF;
+      font-size: 0.82rem;
+      padding: 8px 0;
+      position: relative;
+      z-index: 101;
+    }
+    .announcement-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .announcement-badge {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.7rem;
+      background: rgba(0, 0, 0, 0.28);
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-weight: 700;
+    }
+    .announcement-text {
+      flex: 1;
+      text-align: center;
+    }
+    .share-bio-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: #FFFFFF;
+      color: #E54512;
+      border: none;
+      padding: 4px 12px;
+      border-radius: 99px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.72rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: transform 0.15s ease;
+    }
+    .share-bio-btn:hover {
+      transform: scale(1.04);
+    }
+
+    /* Mobile Sticky Bottom Floating Bar */
+    .mobile-sticky-bar {
+      display: none;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: var(--bg-surface);
+      border-top: 1px solid var(--border-strong);
+      padding: 10px 20px;
+      z-index: 99;
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      box-shadow: 0 -8px 24px rgba(0, 0, 0, 0.35);
+      align-items: center;
+      justify-content: space-between;
+    }
+    .mobile-bar-info {
+      display: flex;
+      flex-direction: column;
+    }
+    .mobile-bar-price {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--accent-primary);
+    }
+    .mobile-bar-tag {
+      font-size: 0.72rem;
+      color: var(--accent-secondary);
+    }
+
     @media (max-width: 960px) {
       .hero-grid, .review-grid, .pricing-grid, .testi-grid, .footer-grid {
         grid-template-columns: 1fr;
@@ -992,9 +1071,52 @@
         display: none;
       }
     }
+
+    @media (max-width: 768px) {
+      .mobile-sticky-bar {
+        display: flex;
+      }
+      body {
+        padding-bottom: 70px;
+      }
+      .top-announcement {
+        font-size: 0.75rem;
+      }
+      .announcement-text {
+        text-align: left;
+      }
+    }
   </style>
 </head>
 <body>
+
+  <!-- TOP FLASH SALE ANNOUNCEMENT BAR -->
+  <aside class="top-announcement">
+    <div class="container announcement-content">
+      <div class="announcement-badge">FLASH SALE HÔM NAY</div>
+      <div class="announcement-text">
+        Trợ giá chính hãng đến <strong>35%</strong> + Tặng dây đeo cổ + Freeship · Kết thúc sau: <span class="font-mono" id="countdownTimer" style="font-weight: 700; background: rgba(0,0,0,0.3); padding: 2px 6px; border-radius: 4px;">03:45:12</span>
+      </div>
+      <button class="share-bio-btn" id="shareBioBtn" title="Sao chép link Bio để dán vào TikTok/Instagram/Facebook">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/>
+          <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/>
+        </svg>
+        Copy Link Bio
+      </button>
+    </div>
+  </aside>
+
+  <!-- MOBILE FLOATING ACTION BAR -->
+  <div class="mobile-sticky-bar" id="mobileBar">
+    <div class="mobile-bar-info">
+      <span class="mobile-bar-price">Từ 389.000đ</span>
+      <span class="mobile-bar-tag">✓ Chính Hãng JISULIFE 100%</span>
+    </div>
+    <a href="#pricing" class="btn-primary" style="padding: 10px 18px; font-size: 0.88rem;">
+      Săn Ưu Đãi 3 Sàn ↓
+    </a>
+  </div>
 
   <!-- STICKY HEADER -->
   <header class="site-header">
@@ -1652,6 +1774,44 @@
         updateTelemetry(level);
       });
     });
+
+    // 3. Countdown Timer (3h 45m 12s)
+    (function startCountdown() {
+      const el = document.getElementById('countdownTimer');
+      if (!el) return;
+      let totalSeconds = 13512;
+      setInterval(() => {
+        totalSeconds = Math.max(0, totalSeconds - 1);
+        const h = String(Math.floor(totalSeconds / 3600)).padStart(2, '0');
+        const m = String(Math.floor((totalSeconds % 3600) / 60)).padStart(2, '0');
+        const s = String(totalSeconds % 60).padStart(2, '0');
+        el.textContent = h + ':' + m + ':' + s;
+      }, 1000);
+    })();
+
+    // 4. 1-Click Copy Bio Link
+    const shareBioBtn = document.getElementById('shareBioBtn');
+    const toastMsg = document.getElementById('toastMsg');
+    if (shareBioBtn) {
+      shareBioBtn.addEventListener('click', () => {
+        const liveUrl = "https://truongtf.github.io/jisulife-turbo-landing/";
+        if (navigator.clipboard) {
+          navigator.clipboard.writeText(liveUrl).then(() => {
+            toastMsg.textContent = "✓ Đã copy link Bio: " + liveUrl;
+            toastMsg.classList.add('show');
+            setTimeout(() => toastMsg.classList.remove('show'), 2600);
+          });
+        }
+      });
+    }
+
+    // 5. CẤU HÌNH LIÊN KẾT AFFILIATE CÁ NHÂN (OPTIONAL)
+    // Khi bạn có link affiliate riêng, bạn có thể điền vào bên dưới để tự động ghi đè:
+    window.CUSTOM_AFFILIATE_LINKS = {
+      // tiktokShop: "link_affiliate_tiktok_cua_ban",
+      // shopeeMall: "link_affiliate_shopee_cua_ban",
+      // lazadaMall: "link_affiliate_lazada_cua_ban"
+    };
   </script>
 </body>
 </html>
