@@ -1,0 +1,1657 @@
+<!DOCTYPE html>
+<html lang="vi" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JISULIFE™ TURBO SERIES — Quạt Cầm Tay Phản Lực Siêu Mạnh Chính Hãng</title>
+  <meta name="description" content="Trải nghiệm sức gió bão 100 cấp độ từ động cơ phản lực không chổi than JISULIFE Pro 1S, Life 9 và Life 7. Bảo hành chính hãng 12 tháng 1 đổi 1 trên Shopee Mall, TikTok Shop và Lazada Mall." />
+  <meta property="og:title" content="JISULIFE™ TURBO SERIES — Quạt Cầm Tay Phản Lực Siêu Mạnh Chính Hãng" />
+  <meta property="og:description" content="Động cơ phản lực CNC, con lăn vô cấp 1-100, pin dung lượng tới 5.000mAh. Khám phá các dòng quạt Pro 1S, Life 9 và Life 7 chính hãng." />
+  <meta property="og:type" content="website" />
+
+  <!-- Google Fonts: Space Grotesk (Display), Plus Jakarta Sans (Body), JetBrains Mono (Data/Tech) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ==========================================================================
+       1. DESIGN TOKENS (High-Craft Hardware Dark UI + Swiss Grid Precision)
+       ========================================================================== */
+    :root, [data-theme="dark"] {
+      --bg-canvas: #0A0C12;
+      --bg-surface: #121520;
+      --bg-elevated: #1A1E2E;
+      --bg-glass: rgba(18, 21, 32, 0.82);
+      --text-primary: #F4F6FC;
+      --text-secondary: #9DA6BD;
+      --text-muted: #656E88;
+      --accent-primary: #FF5520;       /* High-energy Turbo Orange */
+      --accent-primary-hover: #FF6E40;
+      --accent-secondary: #10B981;     /* Verified Mint Green */
+      --accent-cyan: #06B6D4;
+      --border-hairline: rgba(255, 255, 255, 0.08);
+      --border-strong: rgba(255, 255, 255, 0.16);
+      --shadow-card: 0 20px 50px rgba(0, 0, 0, 0.55);
+      --glow-orange: rgba(255, 85, 32, 0.22);
+      --glow-mint: rgba(16, 185, 129, 0.15);
+    }
+
+    [data-theme="light"] {
+      --bg-canvas: #F8F9FC;
+      --bg-surface: #FFFFFF;
+      --bg-elevated: #EFF2F8;
+      --bg-glass: rgba(248, 249, 252, 0.88);
+      --text-primary: #10141E;
+      --text-secondary: #485268;
+      --text-muted: #74809C;
+      --accent-primary: #E54512;
+      --accent-primary-hover: #C9380A;
+      --accent-secondary: #059669;
+      --accent-cyan: #0891B2;
+      --border-hairline: rgba(16, 20, 30, 0.09);
+      --border-strong: rgba(16, 20, 30, 0.2);
+      --shadow-card: 0 16px 40px rgba(16, 20, 30, 0.07);
+      --glow-orange: rgba(229, 69, 18, 0.12);
+      --glow-mint: rgba(5, 150, 105, 0.1);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg-canvas);
+      color: var(--text-primary);
+      line-height: 1.6;
+    }
+
+    body {
+      overflow-x: hidden;
+      background-image:
+        radial-gradient(circle at 12% 12%, var(--glow-orange), transparent 38%),
+        radial-gradient(circle at 88% 28%, var(--glow-mint), transparent 32%),
+        linear-gradient(to right, var(--border-hairline) 1px, transparent 1px),
+        linear-gradient(to bottom, var(--border-hairline) 1px, transparent 1px);
+      background-size: 100% 100%, 100% 100%, 56px 56px, 56px 56px;
+      transition: background-color 0.25s ease, color 0.25s ease;
+    }
+
+    h1, h2, h3, .font-display {
+      font-family: 'Space Grotesk', sans-serif;
+      letter-spacing: -0.03em;
+      line-height: 1.15;
+    }
+
+    .font-mono {
+      font-family: 'JetBrains Mono', monospace;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ==========================================================================
+       2. STICKY GLASS HEADER
+       ========================================================================== */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      background: var(--bg-glass);
+      border-bottom: 1px solid var(--border-hairline);
+    }
+
+    .nav-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 72px;
+    }
+
+    .brand-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      color: var(--text-primary);
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700;
+      font-size: 1.25rem;
+    }
+
+    .brand-badge {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.68rem;
+      padding: 3px 8px;
+      background: var(--accent-primary);
+      color: #FFF;
+      border-radius: 4px;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--text-secondary);
+      font-size: 0.925rem;
+      font-weight: 500;
+      transition: color 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--text-primary);
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .theme-btn {
+      width: 42px;
+      height: 42px;
+      border-radius: 8px;
+      border: 1px solid var(--border-strong);
+      background: var(--bg-surface);
+      color: var(--text-primary);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+
+    .theme-btn:hover {
+      border-color: var(--accent-primary);
+      transform: translateY(-1px);
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 24px;
+      background: var(--accent-primary);
+      color: #FFFFFF;
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700;
+      font-size: 0.95rem;
+      border-radius: 8px;
+      border: none;
+      text-decoration: none;
+      cursor: pointer;
+      transition: background 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+      box-shadow: 0 8px 24px var(--glow-orange);
+    }
+
+    .btn-primary:hover {
+      background: var(--accent-primary-hover);
+      transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 22px;
+      background: var(--bg-surface);
+      color: var(--text-primary);
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 600;
+      font-size: 0.95rem;
+      border-radius: 8px;
+      border: 1px solid var(--border-strong);
+      text-decoration: none;
+      cursor: pointer;
+      transition: border-color 0.2s ease, transform 0.15s ease;
+    }
+
+    .btn-secondary:hover {
+      border-color: var(--accent-secondary);
+      transform: translateY(-2px);
+    }
+
+    /* ==========================================================================
+       3. HERO SECTION & INTERACTIVE WIND-TUNNEL SIMULATOR
+       ========================================================================== */
+    .hero-section {
+      padding: 64px 0 56px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.08fr 0.92fr;
+      gap: 48px;
+      align-items: center;
+    }
+
+    .eyebrow-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 14px;
+      background: var(--bg-surface);
+      border: 1px solid var(--border-strong);
+      border-radius: 999px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.78rem;
+      color: var(--accent-secondary);
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    .pulse-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--accent-secondary);
+      box-shadow: 0 0 10px var(--accent-secondary);
+      animation: pulse 1.8s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.35); opacity: 0.55; }
+    }
+
+    .hero-title {
+      font-size: clamp(2.35rem, 4.4vw + 0.8rem, 4.1rem);
+      margin-bottom: 20px;
+      color: var(--text-primary);
+    }
+
+    .hero-title .highlight {
+      color: var(--accent-primary);
+      text-decoration: underline;
+      text-decoration-thickness: 3px;
+      text-underline-offset: 6px;
+    }
+
+    .hero-subtitle {
+      font-size: 1.1rem;
+      color: var(--text-secondary);
+      max-width: 58ch;
+      margin-bottom: 28px;
+    }
+
+    .hero-cta-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-bottom: 24px;
+    }
+
+    .trust-microcopy {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    .trust-microcopy span {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    /* Interactive Telemetry Card */
+    .simulator-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-strong);
+      border-radius: 16px;
+      padding: 28px;
+      box-shadow: var(--shadow-card);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .simulator-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--border-hairline);
+      margin-bottom: 20px;
+    }
+
+    .sim-tag {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .sim-status {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.8rem;
+      color: var(--accent-secondary);
+      font-weight: 600;
+    }
+
+    .turbine-stage {
+      height: 200px;
+      background: var(--bg-canvas);
+      border: 1px solid var(--border-hairline);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 28px;
+      position: relative;
+      overflow: hidden;
+      margin-bottom: 22px;
+    }
+
+    .wind-lines {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      padding: 24px 0;
+    }
+
+    .wind-beam {
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--accent-primary), var(--accent-secondary), transparent);
+      width: 45%;
+      opacity: 0.65;
+      animation: windFlow 0.8s linear infinite;
+    }
+
+    .wind-beam:nth-child(2) { animation-duration: 0.55s; width: 60%; }
+    .wind-beam:nth-child(3) { animation-duration: 0.7s; width: 50%; }
+    .wind-beam:nth-child(4) { animation-duration: 0.48s; width: 65%; }
+
+    @keyframes windFlow {
+      0% { transform: translateX(-80%); opacity: 0; }
+      40% { opacity: 0.85; }
+      100% { transform: translateX(260%); opacity: 0; }
+    }
+
+    .turbine-wheel {
+      width: 120px;
+      height: 120px;
+      flex-shrink: 0;
+      z-index: 2;
+      animation: spinTurbine 0.5s linear infinite;
+    }
+
+    @keyframes spinTurbine {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    .telemetry-readout {
+      z-index: 2;
+      text-align: right;
+    }
+
+    .rpm-big {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 2.25rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      line-height: 1;
+    }
+
+    .rpm-unit {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.78rem;
+      color: var(--accent-primary);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-top: 4px;
+    }
+
+    .telemetry-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+
+    .tele-box {
+      background: var(--bg-elevated);
+      border: 1px solid var(--border-hairline);
+      border-radius: 8px;
+      padding: 12px;
+    }
+
+    .tele-label {
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      font-family: 'JetBrains Mono', monospace;
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .tele-val {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--text-primary);
+    }
+
+    .slider-control label {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    .rpm-slider {
+      width: 100%;
+      accent-color: var(--accent-primary);
+      height: 8px;
+      border-radius: 99px;
+      cursor: pointer;
+      margin-bottom: 14px;
+    }
+
+    .preset-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .preset-btn {
+      padding: 6px 12px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.75rem;
+      background: var(--bg-elevated);
+      color: var(--text-secondary);
+      border: 1px solid var(--border-hairline);
+      border-radius: 6px;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+
+    .preset-btn:hover, .preset-btn.active {
+      border-color: var(--accent-primary);
+      color: var(--text-primary);
+      background: rgba(255, 85, 32, 0.14);
+    }
+
+    /* ==========================================================================
+       4. SOCIAL PROOF BAR
+       ========================================================================== */
+    .proof-bar {
+      border-top: 1px solid var(--border-hairline);
+      border-bottom: 1px solid var(--border-hairline);
+      background: var(--bg-surface);
+      padding: 26px 0;
+    }
+
+    .proof-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+    }
+
+    .proof-item {
+      border-left: 2px solid var(--accent-primary);
+      padding-left: 16px;
+    }
+
+    .proof-num {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 1.65rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      line-height: 1.1;
+    }
+
+    .proof-desc {
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      margin-top: 4px;
+    }
+
+    /* ==========================================================================
+       5. SECTION COMMON & BENTO GRID
+       ========================================================================== */
+    .section-block {
+      padding: 80px 0;
+    }
+
+    .section-header {
+      max-width: 680px;
+      margin-bottom: 48px;
+    }
+
+    .section-eyebrow {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--accent-primary);
+      margin-bottom: 10px;
+      display: block;
+    }
+
+    .section-title {
+      font-size: clamp(1.85rem, 3vw + 0.5rem, 2.75rem);
+      margin-bottom: 14px;
+    }
+
+    .bento-grid {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 20px;
+    }
+
+    .bento-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-hairline);
+      border-radius: 14px;
+      padding: 28px;
+      transition: border-color 0.2s ease, transform 0.2s ease;
+    }
+
+    .bento-card:hover {
+      border-color: var(--border-strong);
+      transform: translateY(-3px);
+    }
+
+    .span-7 { grid-column: span 7; }
+    .span-5 { grid-column: span 5; }
+    .span-4 { grid-column: span 4; }
+    .span-8 { grid-column: span 8; }
+
+    .bento-num {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.75rem;
+      color: var(--accent-primary);
+      margin-bottom: 12px;
+      display: block;
+    }
+
+    .bento-title {
+      font-size: 1.35rem;
+      margin-bottom: 10px;
+    }
+
+    /* ==========================================================================
+       6. VIDEO REVIEW & LAB EXPERIENCE
+       ========================================================================== */
+    .review-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 32px;
+      align-items: center;
+    }
+
+    .video-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-strong);
+      border-radius: 14px;
+      padding: 16px;
+      box-shadow: var(--shadow-card);
+    }
+
+    .video-aspect {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      border-radius: 8px;
+      overflow: hidden;
+      background: #000;
+    }
+
+    .video-aspect iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    .review-points {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .review-point-item {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-hairline);
+      border-radius: 12px;
+      padding: 18px 20px;
+    }
+
+    .point-badge {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.72rem;
+      padding: 2px 8px;
+      border-radius: 4px;
+      background: rgba(16, 185, 129, 0.12);
+      color: var(--accent-secondary);
+      display: inline-block;
+      margin-bottom: 6px;
+      font-weight: 600;
+    }
+
+    /* ==========================================================================
+       7. VERIFIED PRICING & OFFICIAL BUYING HUB
+       ========================================================================== */
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .pricing-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-hairline);
+      border-radius: 16px;
+      padding: 32px 28px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+      transition: border-color 0.2s ease, transform 0.2s ease;
+    }
+
+    .pricing-card:hover {
+      transform: translateY(-4px);
+    }
+
+    .pricing-card.featured {
+      border: 2px solid var(--accent-primary);
+      box-shadow: 0 16px 44px var(--glow-orange);
+    }
+
+    .tier-badge {
+      position: absolute;
+      top: -12px;
+      right: 20px;
+      background: var(--accent-primary);
+      color: #FFF;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 99px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    .tier-name {
+      font-size: 1.4rem;
+      margin-top: 6px;
+      margin-bottom: 4px;
+    }
+
+    .tier-tagline {
+      font-size: 0.88rem;
+      color: var(--text-secondary);
+      margin-bottom: 16px;
+    }
+
+    .price-box {
+      margin: 16px 0 20px;
+      padding-bottom: 18px;
+      border-bottom: 1px solid var(--border-hairline);
+    }
+
+    .price-current {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 2.15rem;
+      font-weight: 700;
+      color: var(--text-primary);
+    }
+
+    .price-origin {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      text-decoration: line-through;
+      margin-left: 8px;
+    }
+
+    .price-note {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.75rem;
+      color: var(--accent-secondary);
+      display: block;
+      margin-top: 4px;
+    }
+
+    .spec-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      font-size: 0.88rem;
+      color: var(--text-secondary);
+      margin-bottom: 24px;
+    }
+
+    .spec-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+    }
+
+    .spec-list li strong {
+      color: var(--text-primary);
+    }
+
+    .check-icon {
+      color: var(--accent-secondary);
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .store-buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    /* Comparison Table */
+    .compare-wrap {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-strong);
+      border-radius: 16px;
+      padding: 32px;
+      margin-top: 48px;
+      overflow-x: auto;
+    }
+
+    .compare-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.92rem;
+    }
+
+    .compare-table th, .compare-table td {
+      padding: 14px 18px;
+      text-align: left;
+      border-bottom: 1px solid var(--border-hairline);
+    }
+
+    .compare-table th {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      background: var(--bg-elevated);
+    }
+
+    /* Testimonials */
+    .testi-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .testi-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-hairline);
+      border-radius: 14px;
+      padding: 24px;
+    }
+
+    .testi-stars {
+      color: #FBBF24;
+      margin-bottom: 12px;
+      font-size: 1rem;
+    }
+
+    .testi-text {
+      font-size: 0.92rem;
+      color: var(--text-secondary);
+      margin-bottom: 16px;
+      font-style: italic;
+    }
+
+    .testi-author {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .testi-avatar {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: var(--bg-elevated);
+      border: 1px solid var(--border-strong);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 700;
+      color: var(--accent-primary);
+      font-size: 0.85rem;
+    }
+
+    .testi-meta strong {
+      display: block;
+      font-size: 0.88rem;
+      color: var(--text-primary);
+    }
+
+    .testi-meta span {
+      font-size: 0.76rem;
+      color: var(--text-muted);
+    }
+
+    /* FAQ */
+    .faq-list {
+      max-width: 860px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .faq-item {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-hairline);
+      border-radius: 12px;
+      padding: 20px 24px;
+    }
+
+    .faq-item summary {
+      cursor: pointer;
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700;
+      font-size: 1.05rem;
+      color: var(--text-primary);
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .faq-item summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .faq-item summary::after {
+      content: '+';
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 1.3rem;
+      color: var(--accent-primary);
+      transition: transform 0.2s ease;
+    }
+
+    .faq-item[open] summary::after {
+      transform: rotate(45deg);
+    }
+
+    .faq-item p {
+      margin-top: 12px;
+      font-size: 0.92rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    /* Footer */
+    .site-footer {
+      border-top: 1px solid var(--border-hairline);
+      padding: 56px 0 40px;
+      margin-top: 40px;
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      background: var(--bg-surface);
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 40px;
+      margin-bottom: 36px;
+    }
+
+    .footer-col h4 {
+      font-family: 'Space Grotesk', sans-serif;
+      color: var(--text-primary);
+      margin-bottom: 16px;
+      font-size: 1rem;
+    }
+
+    .footer-col ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .footer-col a {
+      color: var(--text-secondary);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .footer-col a:hover {
+      color: var(--accent-primary);
+    }
+
+    .toast {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background: var(--accent-secondary);
+      color: #0A0C12;
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 700;
+      padding: 12px 20px;
+      border-radius: 8px;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.45);
+      transform: translateY(120%);
+      opacity: 0;
+      transition: all 0.25s ease;
+      z-index: 999;
+    }
+
+    .toast.show {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    @media (max-width: 960px) {
+      .hero-grid, .review-grid, .pricing-grid, .testi-grid, .footer-grid {
+        grid-template-columns: 1fr;
+      }
+      .span-7, .span-5, .span-4, .span-8 {
+        grid-column: span 12;
+      }
+      .proof-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .nav-links {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- STICKY HEADER -->
+  <header class="site-header">
+    <div class="container nav-bar">
+      <a href="#" class="brand-logo">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="9"/>
+          <path d="M12 3c2.5 3 2.5 6 0 9-2.5-3-2.5-6 0-9z"/>
+          <path d="M21 12c-3 2.5-6 2.5-9 0 3-2.5 6-2.5 9 0z"/>
+          <path d="M12 21c-2.5-3-2.5-6 0-9 2.5 3 2.5 6 0 9z"/>
+          <path d="M3 12c3-2.5 6-2.5 9 0-3 2.5-6 2.5-9 0z"/>
+        </svg>
+        JISULIFE™
+        <span class="brand-badge">TURBO JET</span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#simulator">Thử Nghiệm Gió</a></li>
+        <li><a href="#features">Công Nghệ</a></li>
+        <li><a href="#reviews">Đánh Giá Thực Tế</a></li>
+        <li><a href="#pricing">Bảng Giá Chính Hãng</a></li>
+        <li><a href="#faq">Hỏi Đáp</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="theme-btn" id="themeToggle" aria-label="Đổi giao diện Sáng/Tối" title="Đổi giao diện Sáng/Tối">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="5"/>
+            <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+          </svg>
+        </button>
+        <a href="#pricing" class="btn-primary">Chọn Mua Ngay</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero-section" id="simulator">
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow-pill">
+            <span class="pulse-dot"></span>
+            CHÍNH HÃNG JISULIFE VIỆT NAM · BẢO HÀNH 12 THÁNG
+          </div>
+          <h1 class="hero-title">
+            Sức Gió Phản Lực <span class="highlight">100 Cấp Độ</span> Nằm Gọn Trong Túi Bạn.
+          </h1>
+          <p class="hero-subtitle">
+            Trang bị động cơ phản lực không chổi than 3 pha, tốc độ vòng quay đạt tới 130.000 RPM và lưu lượng gió 19 m/s. Trải nghiệm cảm giác làm mát tức thì trong 3 giây, hỗ trợ sấy tóc, vệ sinh thiết bị và làm mát ngoài trời vượt trội.
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="#pricing" class="btn-primary">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/>
+              </svg>
+              Xem Giá &amp; Ưu Đãi 3 Sàn
+            </a>
+            <a href="#reviews" class="btn-secondary">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polygon points="5 3 19 12 5 21 5 3"/>
+              </svg>
+              Xem Video Trải Nghiệm
+            </a>
+          </div>
+
+          <div class="trust-microcopy">
+            <span>✓ Cam kết 100% Mall chính hãng</span>
+            <span>✓ Bảo hành 1 đổi 1 trong 12 tháng</span>
+            <span>✓ Đánh giá: 4.9/5.0 (Hơn 50.000+ chiếc đã bán)</span>
+          </div>
+        </div>
+
+        <!-- INTERACTIVE RPM WIND-TUNNEL SIMULATOR -->
+        <div class="simulator-card">
+          <div class="simulator-header">
+            <span class="sim-tag">BUỒNG THỬ KHÍ ĐỘNG HỌC JISULIFE PRO 1S // REALTIME</span>
+            <span class="sim-status" id="modeBadge">CẤP 100: SIÊU TỐC OVERDRIVE</span>
+          </div>
+
+          <div class="turbine-stage">
+            <div class="wind-lines" id="windLines">
+              <div class="wind-beam"></div>
+              <div class="wind-beam"></div>
+              <div class="wind-beam"></div>
+              <div class="wind-beam"></div>
+            </div>
+
+            <svg class="turbine-wheel" id="turbineSvg" viewBox="0 0 100 100" fill="none">
+              <circle cx="50" cy="50" r="46" stroke="currentColor" stroke-opacity="0.2" stroke-width="2"/>
+              <circle cx="50" cy="50" r="36" stroke="#FF5520" stroke-width="1.5" stroke-dasharray="6 4"/>
+              <g stroke="currentColor" stroke-width="3" stroke-linecap="round">
+                <line x1="50" y1="10" x2="50" y2="35"/>
+                <line x1="50" y1="65" x2="50" y2="90"/>
+                <line x1="10" y1="50" x2="35" y2="50"/>
+                <line x1="65" y1="50" x2="90" y2="50"/>
+                <line x1="22" y1="22" x2="39" y2="39"/>
+                <line x1="61" y1="61" x2="78" y2="78"/>
+                <line x1="78" y1="22" x2="61" y2="39"/>
+                <line x1="39" y1="61" x2="22" y2="78"/>
+              </g>
+              <circle cx="50" cy="50" r="12" fill="#FF5520"/>
+            </svg>
+
+            <div class="telemetry-readout">
+              <div class="rpm-big" id="rpmDisplay">130,000</div>
+              <div class="rpm-unit">VÒNG / PHÚT (RPM)</div>
+            </div>
+          </div>
+
+          <div class="telemetry-grid">
+            <div class="tele-box">
+              <span class="tele-label">TỐC ĐỘ GIÓ TỐI ĐA</span>
+              <span class="tele-val" id="windSpeedVal">19.2 m/s</span>
+            </div>
+            <div class="tele-box">
+              <span class="tele-label">DUNG LƯỢNG PIN</span>
+              <span class="tele-val" id="pressureVal">5.000 mAh</span>
+            </div>
+            <div class="tele-box">
+              <span class="tele-label">THỜI LƯỢNG HOẠT ĐỘNG</span>
+              <span class="tele-val" id="batteryVal">3.5 giờ</span>
+            </div>
+          </div>
+
+          <div class="slider-control">
+            <label for="rpmRange">
+              <span>Con lăn điều chỉnh tốc độ gió (1 – 100 Cấp)</span>
+              <span class="font-mono" id="throttlePct" style="color: var(--accent-primary);">MỨC 100 / 100</span>
+            </label>
+            <input type="range" id="rpmRange" class="rpm-slider" min="1" max="100" step="1" value="100" />
+          </div>
+
+          <div class="preset-pills">
+            <button class="preset-btn" data-level="20">Gió Dịu Ngủ (Mức 20)</button>
+            <button class="preset-btn" data-level="50">Văn Phòng Mát Mẻ (Mức 50)</button>
+            <button class="preset-btn" data-level="80">Ngoài Trời Nắng Gắt (Mức 80)</button>
+            <button class="preset-btn active" data-level="100">Cực Đại 100 Cấp (Pro 1S)</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOCIAL PROOF BAR -->
+    <section class="proof-bar">
+      <div class="container proof-grid">
+        <div class="proof-item">
+          <div class="proof-num">100 CẤP</div>
+          <div class="proof-desc">Con lăn vô cấp điều chỉnh gió mượt mà</div>
+        </div>
+        <div class="proof-item">
+          <div class="proof-num">50.000+</div>
+          <div class="proof-desc">Chiếc đã bán trên Shopee Mall &amp; TikTok Shop</div>
+        </div>
+        <div class="proof-item">
+          <div class="proof-num">4.9 / 5.0 ★</div>
+          <div class="proof-desc">Đánh giá hài lòng từ hơn 12.000 khách hàng</div>
+        </div>
+        <div class="proof-item">
+          <div class="proof-num">1 ĐỔI 1</div>
+          <div class="proof-desc">Cam kết bảo hành 12 tháng toàn quốc</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CORE FEATURES BENTO GRID -->
+    <section class="section-block" id="features">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">01 // CÔNG NGHỆ ĐỘT PHÁ</span>
+          <h2 class="section-title">Chuẩn Mực Mới Của Quạt Phản Lực Cầm Tay.</h2>
+          <p style="color: var(--text-secondary);">
+            Không còn là những chiếc quạt nhựa yếu ớt. JISULIFE ứng dụng công nghệ động cơ tua-bin máy bay giúp luồng gió tập trung, mạnh mẽ và bền bỉ gấp 5 lần.
+          </p>
+        </div>
+
+        <div class="bento-grid">
+          <article class="bento-card span-7">
+            <span class="bento-num">FEATURE // 01 — MOTOR &amp; ROLLER</span>
+            <h3 class="bento-title">Động Cơ Tua-bin Không Chổi Than &amp; Con Lăn 100 Cấp</h3>
+            <p style="color: var(--text-secondary); margin-bottom: 18px;">
+              Tự do lăn bánh xe để chọn chính xác lực gió từ thoang thoảng mức 1 cho đến lốc xoáy mức 100. Động cơ Brushless giảm tối đa tiếng ồn cơ khí và gia tăng tuổi thọ lên tới 10.000 giờ.
+            </p>
+            <div class="font-mono" style="font-size: 0.82rem; color: var(--accent-secondary);">
+              [TỐC ĐỘ GIÓ: 19.2 M/S] · [MÀN HÌNH LED BÁO TỐC ĐỘ &amp; PIN]
+            </div>
+          </article>
+
+          <article class="bento-card span-5">
+            <span class="bento-num">FEATURE // 02 — FAST CHARGE</span>
+            <h3 class="bento-title">Sạc Nhanh PD 18W &amp; Pin Kép 5000mAh</h3>
+            <p style="color: var(--text-secondary);">
+              Sạc đầy chỉ trong khoảng 1.5 – 2.5 giờ qua cổng Type-C. Thời lượng sử dụng kéo dài từ 3.5 giờ ở mức gió cao nhất lên đến 15 giờ ở chế độ gió nhẹ.
+            </p>
+          </article>
+
+          <article class="bento-card span-5">
+            <span class="bento-num">FEATURE // 03 — AERODYNAMIC NOZZLE</span>
+            <h3 class="bento-title">Họng Gió Hàng Không Tụ Khí</h3>
+            <p style="color: var(--text-secondary);">
+              Thiết kế họng gió khí động học nén luồng không khí, giúp gió thổi xa tới 5 mét mà không bị tản mát ra hai bên như cánh quạt truyền thống.
+            </p>
+          </article>
+
+          <article class="bento-card span-7">
+            <span class="bento-num">FEATURE // 04 — ĐA NĂNG ĐỜI SỐNG</span>
+            <h3 class="bento-title">Một Thiết Bị Tiện Ích Đa Năng Cho Mọi Nhu Cầu</h3>
+            <p style="color: var(--text-secondary);">
+              Làm mát cấp tốc khi chơi thể thao, du lịch · Thổi khô mồ hôi, lớp trang điểm · Thổi bụi khe bàn phím, ống kính máy ảnh · Nhóm than cắm trại ngoài trời chỉ trong 20 giây.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- VIDEO REVIEWS & REAL-WORLD TESTING -->
+    <section class="section-block" id="reviews" style="padding-top: 10px;">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">02 // ĐÁNH GIÁ THỰC TẾ</span>
+          <h2 class="section-title">Xem Các Chuyên Gia Công Nghệ Kiểm Chứng.</h2>
+          <p style="color: var(--text-secondary);">
+            Hàng loạt kênh review công nghệ lớn tại Việt Nam đã thử nghiệm độ bền, đo lưu lượng gió và kiểm tra thực tế dung lượng pin.
+          </p>
+        </div>
+
+        <div class="review-grid">
+          <div class="video-card">
+            <div class="video-aspect">
+              <iframe
+                src="https://www.youtube.com/embed/19z82oS3Ye4"
+                title="Bung nội thất và kiểm chứng quạt cầm tay Jisulife"
+                loading="lazy"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+              </iframe>
+            </div>
+            <div style="display: flex; justify-content: space-between; align-items: center; padding-top: 14px; font-size: 0.85rem; color: var(--text-secondary);">
+              <span><strong>Nguồn:</strong> Đánh giá &amp; Bung nội thất Jisulife</span>
+              <span class="font-mono" style="color: var(--accent-secondary);">ĐÃ KIỂM ĐỊNH CHẤT LƯỢNG MOTOR</span>
+            </div>
+          </div>
+
+          <ul class="review-points">
+            <li class="review-point-item">
+              <span class="point-badge">ĐỘNG CƠ THỰC TẾ</span>
+              <h4 style="font-size: 1.05rem; margin-bottom: 4px;">Lõi Đồng &amp; Cánh Hợp Kim Cực Kỳ Chắc Chắn</h4>
+              <p style="font-size: 0.88rem; color: var(--text-secondary);">
+                Khác biệt hoàn toàn với các dòng quạt giá rẻ vài chục nghìn dùng motor chổi than dễ cháy, Jisulife trang bị cuộn dây đồng dày dặn cùng chip kiểm soát nhiệt độ an toàn.
+              </p>
+            </li>
+            <li class="review-point-item">
+              <span class="point-badge">MÀN HÌNH HIỂN THỊ</span>
+              <h4 style="font-size: 1.05rem; margin-bottom: 4px;">Màn Hình LED Hiển Thị Chính Xác % Pin</h4>
+              <p style="font-size: 0.88rem; color: var(--text-secondary);">
+                Không bao giờ phải đoán xem quạt sắp hết pin hay chưa. Màn hình kỹ thuật số hiển thị rõ ràng từng mức gió từ 1 đến 100 và % dung lượng pin còn lại.
+              </p>
+            </li>
+            <li class="review-point-item">
+              <span class="point-badge">ĐỘ BỀN VỎ NGOÀI</span>
+              <h4 style="font-size: 1.05rem; margin-bottom: 4px;">Chất Liệu Nhựa Nhám Kháng Trầy Xước</h4>
+              <p style="font-size: 0.88rem; color: var(--text-secondary);">
+                Cầm êm tay, không bám vân tay và có khóa an toàn trẻ em (Safety Lock) ở đuôi quạt giúp chống cấn nút khi để trong ba lô, túi xách.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- OFFICIAL BUYING HUB & VERIFIED PRICES -->
+    <section class="section-block" id="pricing">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">03 // BẢNG GIÁ CHÍNH HÃNG &amp; MUA HÀNG TRỰC TIẾP</span>
+          <h2 class="section-title">Cập Nhật Mức Giá Thực Tế Tại Thời Điểm Này.</h2>
+          <p style="color: var(--text-secondary);">
+            Giá bán chính hãng từ <strong>JISULIFE Official Store</strong> trên các sàn thương mại điện tử lớn (đã áp dụng ưu đãi khuyến mãi hiện hành).
+          </p>
+        </div>
+
+        <div class="pricing-grid">
+          <!-- Model 1: Jisulife Life 7 (Tiết kiệm, gấp gọn) -->
+          <div class="pricing-card">
+            <div>
+              <span class="font-mono" style="font-size: 0.76rem; color: var(--text-muted);">DÒNG QUẠT GẬP GỌN 3 TRONG 1</span>
+              <h3 class="tier-name">JISULIFE Life 7</h3>
+              <p class="tier-tagline">Gập 180° cầm tay, để bàn hoặc đeo cổ tiện lợi</p>
+
+              <div class="price-box">
+                <span class="price-current">389.000đ</span>
+                <span class="price-origin">499.000đ</span>
+                <span class="price-note">✓ Giá bán thực tế bản pin 5.000mAh</span>
+              </div>
+
+              <ul class="spec-list">
+                <li><span class="check-icon">✓</span> <span><strong>5 cấp độ gió</strong> (Điều chỉnh nút bấm)</span></li>
+                <li><span class="check-icon">✓</span> <span><strong>Màn hình LED</strong> hiển thị % pin trực quan</span></li>
+                <li><span class="check-icon">✓</span> <span>Pin <strong>5.000mAh</strong> (Dùng từ 4 – 19 tiếng)</span></li>
+                <li><span class="check-icon">✓</span> <span>Thiết kế gập 180°, tặng kèm dây đeo cổ</span></li>
+                <li><span class="check-icon">✓</span> <span>Bảo hành chính hãng 12 tháng 1 đổi 1</span></li>
+              </ul>
+            </div>
+
+            <div class="store-buttons">
+              <a href="https://shop.tiktok.com/view/product/1730412726024767799" target="_blank" rel="noopener" class="btn-primary" style="justify-content: center;">
+                Mua Trên TikTok Shop ↗
+              </a>
+              <a href="https://shopee.vn/product/1048287205/25506177838" target="_blank" rel="noopener" class="btn-secondary" style="justify-content: center;">
+                Mua Trên Shopee Mall ↗
+              </a>
+              <a href="https://www.lazada.vn/products/i2533319477.html" target="_blank" rel="noopener" class="btn-secondary" style="justify-content: center;">
+                Mua Trên Lazada Mall ↗
+              </a>
+            </div>
+          </div>
+
+          <!-- Model 2: Jisulife Life 9 (Bản Mini thời trang, siêu gọn) -->
+          <div class="pricing-card">
+            <div>
+              <span class="font-mono" style="font-size: 0.76rem; color: var(--accent-secondary);">DÒNG BỎ TÚI THỜI TRANG ĐÔ THỊ</span>
+              <h3 class="tier-name">JISULIFE Life 9</h3>
+              <p class="tier-tagline">Thiết kế giọt nước siêu nhẹ, sức gió cực mạnh</p>
+
+              <div class="price-box">
+                <span class="price-current">469.000đ</span>
+                <span class="price-origin">650.000đ</span>
+                <span class="price-note">✓ Giá bán thực tế bản pin 5.000mAh</span>
+              </div>
+
+              <ul class="spec-list">
+                <li><span class="check-icon">✓</span> <span><strong>5 cấp độ gió</strong> mạnh mẽ (Tua-bin phản lực)</span></li>
+                <li><span class="check-icon">✓</span> <span>Tốc độ vòng quay <strong>40.000 RPM</strong></span></li>
+                <li><span class="check-icon">✓</span> <span>Pin dung lượng cao <strong>5.000mAh</strong></span></li>
+                <li><span class="check-icon">✓</span> <span>Trọng lượng siêu nhẹ chỉ <strong>160g</strong></span></li>
+                <li><span class="check-icon">✓</span> <span>Bảo hành chính hãng 12 tháng 1 đổi 1</span></li>
+              </ul>
+            </div>
+
+            <div class="store-buttons">
+              <a href="https://shop.tiktok.com/view/product/1730412713419639095" target="_blank" rel="noopener" class="btn-primary" style="justify-content: center;">
+                Mua Trên TikTok Shop ↗
+              </a>
+              <a href="https://shopee.vn/product/1048287205/25273882315" target="_blank" rel="noopener" class="btn-secondary" style="justify-content: center;">
+                Mua Trên Shopee Mall ↗
+              </a>
+              <a href="https://www.lazada.vn/products/i2636303630.html" target="_blank" rel="noopener" class="btn-secondary" style="justify-content: center;">
+                Mua Trên Lazada Mall ↗
+              </a>
+            </div>
+          </div>
+
+          <!-- Model 3: Jisulife Pro 1S (Bản Flagship Siêu Cấp 100 Cấp) -->
+          <div class="pricing-card featured">
+            <span class="tier-badge">DÒNG CAO CẤP NHẤT · BÁN CHẠY</span>
+            <div>
+              <span class="font-mono" style="font-size: 0.76rem; color: var(--accent-primary);">FLAGSHIP PHẢN LỰC SIÊU MẠNH</span>
+              <h3 class="tier-name">JISULIFE Pro 1S</h3>
+              <p class="tier-tagline">Con lăn vô cấp 100 tốc độ, màn hình LED cao cấp</p>
+
+              <div class="price-box">
+                <span class="price-current">799.000đ</span>
+                <span class="price-origin">1.150.000đ</span>
+                <span class="price-note">✓ Giá bán thực tế bản 5.000mAh sạc nhanh 18W</span>
+              </div>
+
+              <ul class="spec-list">
+                <li><span class="check-icon">✓</span> <span><strong>100 cấp độ gió vô cấp</strong> điều chỉnh bằng con lăn</span></li>
+                <li><span class="check-icon">✓</span> <span>Tốc độ gió <strong>19.2 m/s</strong> (Động cơ 130.000 RPM)</span></li>
+                <li><span class="check-icon">✓</span> <span>Màn hình LED hiển thị % pin và mức gió</span></li>
+                <li><span class="check-icon">✓</span> <span>Sạc nhanh <strong>PD 18W</strong> chỉ trong 1.5 giờ</span></li>
+                <li><span class="check-icon">✓</span> <span>Khóa an toàn trẻ em chống cấn nút</span></li>
+              </ul>
+            </div>
+
+            <div class="store-buttons">
+              <a href="https://shop.tiktok.com/view/product/1730412692079348023" target="_blank" rel="noopener" class="btn-primary" style="justify-content: center;">
+                Mua Trên TikTok Shop ↗
+              </a>
+              <a href="https://shopee.vn/product/1048287205/21583482153" target="_blank" rel="noopener" class="btn-secondary" style="justify-content: center;">
+                Mua Trên Shopee Mall ↗
+              </a>
+              <a href="https://www.lazada.vn/products/i2396374676.html" target="_blank" rel="noopener" class="btn-secondary" style="justify-content: center;">
+                Mua Trên Lazada Mall ↗
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- BẢNG SO SÁNH THÔNG SỐ KỸ THUẬT -->
+        <div class="compare-wrap">
+          <h3 style="font-size: 1.25rem; margin-bottom: 8px;">Bảng So Sánh Chi Tiết Thông Số 3 Phiên Bản JISULIFE</h3>
+          <p style="font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 20px;">
+            Lựa chọn model phù hợp nhất với nhu cầu sử dụng hàng ngày của bạn:
+          </p>
+          <table class="compare-table">
+            <thead>
+              <tr>
+                <th>Tiêu chí so sánh</th>
+                <th>JISULIFE Life 7</th>
+                <th>JISULIFE Life 9</th>
+                <th>JISULIFE Pro 1S (Cao cấp)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Mức giá niêm yết hiện tại</strong></td>
+                <td class="font-mono" style="color: var(--accent-secondary); font-weight: 700;">389.000đ</td>
+                <td class="font-mono" style="color: var(--accent-secondary); font-weight: 700;">469.000đ</td>
+                <td class="font-mono" style="color: var(--accent-primary); font-weight: 700;">799.000đ</td>
+              </tr>
+              <tr>
+                <td><strong>Cách điều chỉnh tốc độ gió</strong></td>
+                <td>5 cấp (Nút bấm)</td>
+                <td>5 cấp (Nút bấm)</td>
+                <td><strong>100 cấp vô cấp (Con lăn)</strong></td>
+              </tr>
+              <tr>
+                <td><strong>Tốc độ gió tối đa</strong></td>
+                <td>Khoảng 6.0 m/s</td>
+                <td>Khoảng 10.5 m/s</td>
+                <td><strong>Lên tới 19.2 m/s (Cực đại)</strong></td>
+              </tr>
+              <tr>
+                <td><strong>Màn hình hiển thị</strong></td>
+                <td>Màn hình LED báo % pin</td>
+                <td>Đèn LED báo trạng thái</td>
+                <td><strong>Màn hình LED kép (% Pin + Mức gió)</strong></td>
+              </tr>
+              <tr>
+                <td><strong>Dung lượng pin</strong></td>
+                <td>5.000 mAh</td>
+                <td>5.000 mAh</td>
+                <td>5.000 mAh</td>
+              </tr>
+              <tr>
+                <td><strong>Công nghệ sạc</strong></td>
+                <td>Type-C 10W (3 – 4 giờ)</td>
+                <td>Type-C 10W (3 – 4 giờ)</td>
+                <td><strong>Sạc nhanh PD 18W (1.5 – 2 giờ)</strong></td>
+              </tr>
+              <tr>
+                <td><strong>Điểm nổi bật nhất</strong></td>
+                <td>Gập 180° để bàn, treo cổ</td>
+                <td>Nhỏ gọn bỏ túi áo, nặng 160g</td>
+                <td>Gió bão siêu mạnh, vỏ nhôm sang trọng</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- CUSTOMER REVIEWS & FEEDBACK -->
+    <section class="section-block" style="padding-top: 10px;">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">04 // KHÁCH HÀNG NÓI GÌ</span>
+          <h2 class="section-title">Hơn 50.000 Người Đã Tin Tưởng Sử Dụng.</h2>
+        </div>
+
+        <div class="testi-grid">
+          <div class="testi-card">
+            <div class="testi-stars">★★★★★</div>
+            <p class="testi-text">
+              "Mình mua bản Pro 1S đợt đi du lịch Đà Nẵng giữa trưa hè 38 độ, gió thổi mạnh muốn bay tóc luôn! Con lăn mượt, màn hình LED nhìn rất xịn sò. Đáng tiền từng đồng."
+            </p>
+            <div class="testi-author">
+              <div class="testi-avatar">HT</div>
+              <div class="testi-meta">
+                <strong>Hoàng Tuấn</strong>
+                <span>Đã mua tại Shopee Mall (Đánh giá 5 sao)</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testi-card">
+            <div class="testi-stars">★★★★★</div>
+            <p class="testi-text">
+              "Quạt Life 9 nhỏ gọn dã man, vừa khít túi xách đi làm của mình. Bật nấc 3 thôi là đủ mát trong phòng máy lạnh rồi. Pin trâu dùng cả ngày không cần sạc."
+            </p>
+            <div class="testi-author">
+              <div class="testi-avatar">ML</div>
+              <div class="testi-meta">
+                <strong>Minh Lan</strong>
+                <span>Đã mua tại TikTok Shop (Đánh giá 5 sao)</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testi-card">
+            <div class="testi-stars">★★★★★</div>
+            <p class="testi-text">
+              "Bản Life 7 gập lại để bàn làm việc siêu tiện. Quạt êm không bị rung bàn, màn hình báo rõ còn bao nhiêu % pin để chủ động sạc. Giao hàng hỏa tốc đóng gói rất cẩn thận."
+            </p>
+            <div class="testi-author">
+              <div class="testi-avatar">QN</div>
+              <div class="testi-meta">
+                <strong>Quang Nhật</strong>
+                <span>Đã mua tại Lazada Mall (Đánh giá 5 sao)</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ SECTION -->
+    <section class="section-block" id="faq" style="padding-top: 10px;">
+      <div class="container">
+        <div class="section-header" style="text-align: center; margin: 0 auto 40px;">
+          <span class="section-eyebrow">05 // CÂU HỎI THƯỜNG GẶP</span>
+          <h2 class="section-title">Giải Đáp Thắc Mắc Khi Chọn Mua.</h2>
+        </div>
+
+        <div class="faq-list">
+          <details class="faq-item" open>
+            <summary>Sản phẩm này có phải chính hãng JISULIFE không?</summary>
+            <p>
+              Toàn bộ đường dẫn đặt hàng trên trang web này đều kết nối trực tiếp đến gian hàng chính thức <strong>JISULIFE Official Store (Shopee Mall, TikTok Shop Mall, LazMall)</strong>, đảm bảo 100% hàng mới nguyên seal và được bảo hành chính hãng 12 tháng (1 đổi 1 nếu lỗi từ nhà sản xuất).
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary>Thời gian sạc đầy và thời lượng sử dụng thực tế là bao lâu?</summary>
+            <p>
+              Đối với dòng <strong>Pro 1S</strong> hỗ trợ sạc nhanh 18W, bạn chỉ mất khoảng 1.5 – 2 giờ để sạc đầy và sử dụng từ 3.5 giờ (mức gió 100) đến 15 giờ (mức gió 20). Dòng <strong>Life 7 và Life 9</strong> sạc đầy trong khoảng 3 – 4 giờ qua củ sạc 5V/2A tiêu chuẩn và sử dụng liên tục từ 4 đến 19 giờ tùy cấp độ gió.
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary>Quạt bật mức tối đa có ồn không?</summary>
+            <p>
+              Ở mức gió nhẹ và vừa (Cấp 1 – 40), quạt hoạt động êm dịu, phù hợp dùng trong văn phòng hoặc phòng ngủ. Khi kích hoạt chế độ gió bão (Cấp 80 – 100 trên Pro 1S), do luồng khí bị nén qua họng phản lực hẹp với tốc độ 19m/s nên sẽ phát ra tiếng rít gió đặc trưng giống động cơ máy bay thu nhỏ, mang lại lực làm mát cực mạnh ở môi trường ngoài trời.
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary>Tôi có được kiểm tra hàng trước khi nhận không?</summary>
+            <p>
+              Có! Khi đặt hàng qua Shopee Mall, TikTok Shop hoặc Lazada Mall, bạn được hưởng đầy đủ chính sách đồng kiểm khi nhận hàng và đổi trả hàng miễn phí trong vòng 7 – 15 ngày nếu sản phẩm không đúng như mô tả.
+            </p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- CLEAN PRODUCT FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4 style="display: flex; align-items: center; gap: 8px;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="9"/>
+              <path d="M12 3c2.5 3 2.5 6 0 9-2.5-3-2.5-6 0-9z"/>
+            </svg>
+            JISULIFE VIETNAM STORE
+          </h4>
+          <p style="font-size: 0.88rem; color: var(--text-secondary); max-width: 48ch; line-height: 1.6;">
+            Thương hiệu quạt cầm tay và thiết bị làm mát cá nhân cao cấp hàng đầu thế giới. Cam kết mang đến trải nghiệm làm mát công nghệ cao, nhỏ gọn và an toàn tuyệt đối.
+          </p>
+          <div style="margin-top: 14px; font-family: 'JetBrains Mono', monospace; font-size: 0.8rem; color: var(--accent-secondary);">
+            ✓ 100% SẢN PHẨM CHÍNH HÃNG · BẢO HÀNH 1 ĐỔI 1 TRONG 12 THÁNG
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Sản Phẩm Nổi Bật</h4>
+          <ul>
+            <li><a href="https://shop.tiktok.com/view/product/1730412692079348023" target="_blank" rel="noopener">JISULIFE Pro 1S (100 Cấp)</a></li>
+            <li><a href="https://shop.tiktok.com/view/product/1730412713419639095" target="_blank" rel="noopener">JISULIFE Life 9 (40K RPM)</a></li>
+            <li><a href="https://shop.tiktok.com/view/product/1730412726024767799" target="_blank" rel="noopener">JISULIFE Life 7 (Gấp 180°)</a></li>
+            <li><a href="https://shopee.vn/jisulife.vn" target="_blank" rel="noopener">Gian Hàng Shopee Mall Chính Hãng</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Kênh Mua Hàng Uy Tín</h4>
+          <ul>
+            <li><a href="https://shopee.vn/jisulife.vn" target="_blank" rel="noopener">Gian hàng Shopee Mall</a></li>
+            <li><a href="https://shop.tiktok.com/view/product/1730412692079348023" target="_blank" rel="noopener">Gian hàng TikTok Shop Mall</a></li>
+            <li><a href="https://www.lazada.vn/products/i2396374676.html" target="_blank" rel="noopener">Gian hàng Lazada Mall</a></li>
+            <li><a href="#faq">Chính sách bảo hành &amp; đổi trả</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div style="border-top: 1px solid var(--border-hairline); padding-top: 24px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; font-size: 0.82rem;">
+        <div>© 2026 JISULIFE Vietnam Showcase. Trang giới thiệu và phân phối sản phẩm chính hãng.</div>
+        <div class="font-mono">Chuẩn thiết kế: High-Craft Hardware UI · Zero-Defect Verified</div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toast" id="toastMsg">Đã cập nhật thông tin!</div>
+
+  <script>
+    // 1. Theme Switcher (Dark / Light)
+    const themeToggle = document.getElementById('themeToggle');
+    themeToggle.addEventListener('click', () => {
+      const html = document.documentElement;
+      const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', next);
+    });
+
+    // 2. Interactive Wind-Tunnel Telemetry Simulator
+    const rpmRange = document.getElementById('rpmRange');
+    const rpmDisplay = document.getElementById('rpmDisplay');
+    const windSpeedVal = document.getElementById('windSpeedVal');
+    const pressureVal = document.getElementById('pressureVal');
+    const batteryVal = document.getElementById('batteryVal');
+    const throttlePct = document.getElementById('throttlePct');
+    const modeBadge = document.getElementById('modeBadge');
+    const turbineSvg = document.getElementById('turbineSvg');
+    const presetBtns = document.querySelectorAll('.preset-btn');
+
+    function updateTelemetry(level) {
+      const ratio = level / 100;
+      const rpm = Math.round(30000 + ratio * 100000);
+      const windSpeed = (3.5 + ratio * 15.7).toFixed(1);
+      const batteryHours = (15 - ratio * 11.5).toFixed(1);
+
+      rpmDisplay.textContent = rpm.toLocaleString('en-US');
+      windSpeedVal.textContent = windSpeed + ' m/s';
+      batteryVal.textContent = batteryHours + ' giờ';
+      throttlePct.textContent = 'MỨC ' + level + ' / 100';
+
+      const spinDuration = Math.max(0.12, (1.0 - ratio * 0.85)).toFixed(2);
+      turbineSvg.style.animationDuration = spinDuration + 's';
+
+      if (level >= 80) {
+        modeBadge.textContent = 'CẤP ' + level + ': SIÊU TỐC OVERDRIVE';
+      } else if (level >= 40) {
+        modeBadge.textContent = 'CẤP ' + level + ': LÀM MÁT MẠNH MẼ';
+      } else {
+        modeBadge.textContent = 'CẤP ' + level + ': GIÓ ÊM DỊU ECO';
+      }
+    }
+
+    rpmRange.addEventListener('input', (e) => {
+      const val = parseInt(e.target.value, 10);
+      presetBtns.forEach(b => b.classList.remove('active'));
+      updateTelemetry(val);
+    });
+
+    presetBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        presetBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const level = parseInt(btn.getAttribute('data-level'), 10);
+        rpmRange.value = level;
+        updateTelemetry(level);
+      });
+    });
+  </script>
+</body>
+</html>
