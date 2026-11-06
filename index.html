@@ -1426,7 +1426,7 @@
               <a href="https://shop.tiktok.com/view/product/1730412726024767799" target="_blank" rel="noopener" class="btn-primary" style="justify-content: center;">
                 Mua Trên TikTok Shop ↗
               </a>
-              <a href="https://shopee.vn/product/1048287205/25506177838" target="_blank" rel="noopener" class="btn-secondary" style="justify-content: center;">
+              <a href="https://shopee.vn/product/1048287205/25506177838?mmp_pid=an_17314210178&utm_source=an_17314210178&utm_medium=affiliates&utm_campaign=id_3TSxb6o6vSn" data-app-url="https://s.shopee.vn/5q9XQ2SyMv" target="_blank" rel="noopener" class="btn-secondary shopee-aff-link" style="justify-content: center;">
                 Mua Trên Shopee Mall ↗
               </a>
               <a href="https://www.lazada.vn/products/i2533319477.html" target="_blank" rel="noopener" class="btn-secondary" style="justify-content: center;">
@@ -1461,7 +1461,7 @@
               <a href="https://shop.tiktok.com/view/product/1730412713419639095" target="_blank" rel="noopener" class="btn-primary" style="justify-content: center;">
                 Mua Trên TikTok Shop ↗
               </a>
-              <a href="https://shopee.vn/product/1048287205/25273882315" target="_blank" rel="noopener" class="btn-secondary" style="justify-content: center;">
+              <a href="https://shopee.vn/product/1048287205/25273882315?mmp_pid=an_17314210178&utm_source=an_17314210178&utm_medium=affiliates&utm_campaign=id_1wg6GYW3473" data-app-url="https://s.shopee.vn/4fxa1pGftL" target="_blank" rel="noopener" class="btn-secondary shopee-aff-link" style="justify-content: center;">
                 Mua Trên Shopee Mall ↗
               </a>
               <a href="https://www.lazada.vn/products/i2636303630.html" target="_blank" rel="noopener" class="btn-secondary" style="justify-content: center;">
@@ -1497,7 +1497,7 @@
               <a href="https://shop.tiktok.com/view/product/1730412692079348023" target="_blank" rel="noopener" class="btn-primary" style="justify-content: center;">
                 Mua Trên TikTok Shop ↗
               </a>
-              <a href="https://shopee.vn/product/1048287205/21583482153" target="_blank" rel="noopener" class="btn-secondary" style="justify-content: center;">
+              <a href="https://shopee.vn/product/1048287205/21583482153?mmp_pid=an_17314210178&utm_source=an_17314210178&utm_medium=affiliates&utm_campaign=id_1h6ebrcblM5" data-app-url="https://s.shopee.vn/4LKjcybPOS" target="_blank" rel="noopener" class="btn-secondary shopee-aff-link" style="justify-content: center;">
                 Mua Trên Shopee Mall ↗
               </a>
               <a href="https://www.lazada.vn/products/i2396374676.html" target="_blank" rel="noopener" class="btn-secondary" style="justify-content: center;">
@@ -1805,13 +1805,33 @@
       });
     }
 
-    // 5. CẤU HÌNH LIÊN KẾT AFFILIATE CÁ NHÂN (OPTIONAL)
-    // Khi bạn có link affiliate riêng, bạn có thể điền vào bên dưới để tự động ghi đè:
+    // 5. CẤU HÌNH LIÊN KẾT AFFILIATE CÁ NHÂN ĐÃ XÁC THỰC (SHOPEE PARTNER: TruongTA)
     window.CUSTOM_AFFILIATE_LINKS = {
-      // tiktokShop: "link_affiliate_tiktok_cua_ban",
-      // shopeeMall: "link_affiliate_shopee_cua_ban",
-      // lazadaMall: "link_affiliate_lazada_cua_ban"
+      accountId: "an_17314210178",
+      pro1s: {
+        canonical: "https://shopee.vn/product/1048287205/21583482153?mmp_pid=an_17314210178&utm_source=an_17314210178&utm_medium=affiliates&utm_campaign=id_1h6ebrcblM5",
+        shortlink: "https://s.shopee.vn/4LKjcybPOS"
+      },
+      life9: {
+        canonical: "https://shopee.vn/product/1048287205/25273882315?mmp_pid=an_17314210178&utm_source=an_17314210178&utm_medium=affiliates&utm_campaign=id_1wg6GYW3473",
+        shortlink: "https://s.shopee.vn/4fxa1pGftL"
+      },
+      life7: {
+        canonical: "https://shopee.vn/product/1048287205/25506177838?mmp_pid=an_17314210178&utm_source=an_17314210178&utm_medium=affiliates&utm_campaign=id_3TSxb6o6vSn",
+        shortlink: "https://s.shopee.vn/5q9XQ2SyMv"
+      }
     };
+
+    // Điều hướng thông minh: Khi mở trên điện thoại (TikTok/Zalo/Mobile Web), ưu tiên mở qua Shopee App Shortlink để lưu cookie hoa hồng tốt nhất
+    const isMobile = /Android|iPhone|iPad|iPod|webOS|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    if (isMobile) {
+      document.querySelectorAll('.shopee-aff-link').forEach(link => {
+        const appUrl = link.getAttribute('data-app-url');
+        if (appUrl) {
+          link.setAttribute('href', appUrl);
+        }
+      });
+    }
   </script>
 </body>
 </html>

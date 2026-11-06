@@ -80,3 +80,4 @@ Tài liệu thực chiến từng bước dành riêng cho chiến dịch quản
      > *"Anh em bấm vào link Bio ở đầu kênh để xem buồng thử gió và bảng so sánh 3 bản nha, đang có trợ giá 35% đó ạ!"*
 3. **Trả lời bình luận bằng video (Reply with Video):**
    * Khi có người hỏi: *"Pin được mấy tiếng?"* hoặc *"Bản Pro 1S khác gì Life 9?"* $\to$ Hãy bấm "Trả lời bằng video" quay trực tiếp câu trả lời. Thuật toán TikTok sẽ đẩy video đó lên xu hướng với tệp người xem cực kỳ chất lượng!
+
