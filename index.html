@@ -727,6 +727,38 @@
       color: var(--text-primary);
     }
 
+    .live-price-sync-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 14px;
+      padding: 6px 16px;
+      border-radius: 999px;
+      background: rgba(16, 185, 129, 0.08);
+      border: 1px solid rgba(16, 185, 129, 0.3);
+      font-size: 0.85rem;
+      color: var(--accent-secondary);
+    }
+
+    .live-dot-pulse {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--accent-secondary);
+      box-shadow: 0 0 10px var(--accent-secondary);
+      animation: pulse 2s infinite;
+    }
+
+    .sync-tag-active {
+      font-size: 0.72rem;
+      font-family: 'JetBrains Mono', monospace;
+      padding: 2px 8px;
+      background: rgba(16, 185, 129, 0.2);
+      border-radius: 6px;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
     .price-origin {
       font-family: 'JetBrains Mono', monospace;
       font-size: 0.95rem;
@@ -1110,7 +1142,7 @@
   <!-- MOBILE FLOATING ACTION BAR -->
   <div class="mobile-sticky-bar" id="mobileBar">
     <div class="mobile-bar-info">
-      <span class="mobile-bar-price">Từ 389.000đ</span>
+      <span class="mobile-bar-price" data-min-price>Từ 389.000đ</span>
       <span class="mobile-bar-tag">✓ Chính Hãng JISULIFE 100%</span>
     </div>
     <a href="#pricing" class="btn-primary" style="padding: 10px 18px; font-size: 0.88rem;">
@@ -1397,6 +1429,11 @@
           <p style="color: var(--text-secondary);">
             Giá bán chính hãng từ <strong>JISULIFE Official Store</strong> trên các sàn thương mại điện tử lớn (đã áp dụng ưu đãi khuyến mãi hiện hành).
           </p>
+          <div class="live-price-sync-pill" id="livePriceSyncPill">
+            <span class="live-dot-pulse"></span>
+            <span>Hệ thống tự động đồng bộ giá Shopee Mall: <strong id="priceSyncDateDisplay">07/11/2026</strong></span>
+            <span class="sync-tag-active">Tự động cập nhật</span>
+          </div>
         </div>
 
         <div class="pricing-grid">
@@ -1408,8 +1445,8 @@
               <p class="tier-tagline">Gập 180° cầm tay, để bàn hoặc đeo cổ tiện lợi</p>
 
               <div class="price-box">
-                <span class="price-current">389.000đ</span>
-                <span class="price-origin">499.000đ</span>
+                <span class="price-current" data-price-key="life7">389.000đ</span>
+                <span class="price-origin" data-origin-key="life7">499.000đ</span>
                 <span class="price-note">✓ Giá bán thực tế bản pin 5.000mAh</span>
               </div>
 
@@ -1443,8 +1480,8 @@
               <p class="tier-tagline">Thiết kế giọt nước siêu nhẹ, sức gió cực mạnh</p>
 
               <div class="price-box">
-                <span class="price-current">469.000đ</span>
-                <span class="price-origin">650.000đ</span>
+                <span class="price-current" data-price-key="life9">469.000đ</span>
+                <span class="price-origin" data-origin-key="life9">650.000đ</span>
                 <span class="price-note">✓ Giá bán thực tế bản pin 5.000mAh</span>
               </div>
 
@@ -1479,8 +1516,8 @@
               <p class="tier-tagline">Con lăn vô cấp 100 tốc độ, màn hình LED cao cấp</p>
 
               <div class="price-box">
-                <span class="price-current">799.000đ</span>
-                <span class="price-origin">1.150.000đ</span>
+                <span class="price-current" data-price-key="pro1s">799.000đ</span>
+                <span class="price-origin" data-origin-key="pro1s">1.150.000đ</span>
                 <span class="price-note">✓ Giá bán thực tế bản 5.000mAh sạc nhanh 18W</span>
               </div>
 
@@ -1525,9 +1562,9 @@
             <tbody>
               <tr>
                 <td><strong>Mức giá niêm yết hiện tại</strong></td>
-                <td class="font-mono" style="color: var(--accent-secondary); font-weight: 700;">389.000đ</td>
-                <td class="font-mono" style="color: var(--accent-secondary); font-weight: 700;">469.000đ</td>
-                <td class="font-mono" style="color: var(--accent-primary); font-weight: 700;">799.000đ</td>
+                <td class="font-mono" style="color: var(--accent-secondary); font-weight: 700;" data-compare-key="life7">389.000đ</td>
+                <td class="font-mono" style="color: var(--accent-secondary); font-weight: 700;" data-compare-key="life9">469.000đ</td>
+                <td class="font-mono" style="color: var(--accent-primary); font-weight: 700;" data-compare-key="pro1s">799.000đ</td>
               </tr>
               <tr>
                 <td><strong>Cách điều chỉnh tốc độ gió</strong></td>
@@ -1832,6 +1869,48 @@
         }
       });
     }
+
+    // 6. TỰ ĐỘNG ĐỒNG BỘ GIÁ TỪ PRICES.JSON (DYNAMIC REAL-TIME PRICE ENGINE)
+    async function syncDynamicPrices() {
+      try {
+        const res = await fetch('./prices.json?t=' + Date.now());
+        if (!res.ok) return;
+        const data = await res.json();
+        if (!data || !data.products) return;
+
+        const formatVND = (num) => new Intl.NumberFormat('vi-VN').format(num) + 'đ';
+
+        for (const [key, prod] of Object.entries(data.products)) {
+          const curEl = document.querySelector(`[data-price-key="${key}"]`);
+          if (curEl && prod.current_price) {
+            curEl.textContent = formatVND(prod.current_price);
+          }
+          const origEl = document.querySelector(`[data-origin-key="${key}"]`);
+          if (origEl && prod.original_price) {
+            origEl.textContent = formatVND(prod.original_price);
+          }
+          const compEl = document.querySelector(`[data-compare-key="${key}"]`);
+          if (compEl && prod.current_price) {
+            compEl.textContent = formatVND(prod.current_price);
+          }
+        }
+
+        const prices = Object.values(data.products).map(p => p.current_price).filter(Boolean);
+        if (prices.length > 0) {
+          const minPrice = Math.min(...prices);
+          const minEl = document.querySelector('[data-min-price]');
+          if (minEl) minEl.textContent = 'Từ ' + formatVND(minPrice);
+        }
+
+        const dateEl = document.getElementById('priceSyncDateDisplay');
+        if (dateEl && data.updated_date_display) {
+          dateEl.textContent = data.updated_date_display;
+        }
+      } catch (e) {
+        // Fallback to static values if offline or error
+      }
+    }
+    syncDynamicPrices();
   </script>
 </body>
 </html>

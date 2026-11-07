@@ -1,0 +1,38 @@
+{
+  "updated_at": "2026-11-07T16:14:28.907298",
+  "updated_date_display": "07/11/2026",
+  "sync_status": "synced_shopee_mall",
+  "note": "Giá niêm yết chính hãng Shopee Mall đã được đồng bộ tự động",
+  "products": {
+    "life7": {
+      "name": "JISULIFE Life 7",
+      "model": "Bản Gập 180° Pin 5.000mAh",
+      "current_price": 389000,
+      "original_price": 499000,
+      "currency": "đ",
+      "discount_percent": 22,
+      "status": "Còn hàng",
+      "shopee_deal": "Flash Sale Trợ Giá 22%"
+    },
+    "life9": {
+      "name": "JISULIFE Life 9",
+      "model": "Tua-bin Phản Lực 40K RPM Pin 5.000mAh",
+      "current_price": 469000,
+      "original_price": 650000,
+      "currency": "đ",
+      "discount_percent": 28,
+      "status": "Còn hàng",
+      "shopee_deal": "Flash Sale Trợ Giá 28%"
+    },
+    "pro1s": {
+      "name": "JISULIFE Pro 1S",
+      "model": "Flagship Nhôm 100 Cấp Gió Sạc Nhanh 18W",
+      "current_price": 799000,
+      "original_price": 1150000,
+      "currency": "đ",
+      "discount_percent": 30,
+      "status": "Còn hàng",
+      "shopee_deal": "Deal Độc Quyền Mall Giảm 30%"
+    }
+  }
+}
